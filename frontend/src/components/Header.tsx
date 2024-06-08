@@ -7,9 +7,8 @@ const Header: React.FC = () => {
         SmartSeed
       </h1>
       <p className="text-center pt-3 text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-200 bg-opacity-40">
-        SLOGAN slogan SLOGAN slogan SLOGAN
+        The Grass is Greener on our Side
         <br />
-        SLOGAN slogan SLOGAN
         
       </p>
     </header>
