@@ -23,17 +23,17 @@ const Navbarr = () => {
         style={{ fontFamily: "Poppins, sans-serif" }}
       >
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link to="/home"color="foreground">
             Home
           </Link>
         </NavbarItem>
         <NavbarItem isActive>
-          <Link href="#"  aria-current="page">
+          <Link to ="/analyze"  aria-current="page">
             About
           </Link>
         </NavbarItem>
         <NavbarItem isActive>
-          <Link href="#"  aria-current="page">
+          <Link to=""  aria-current="page">
             Contact
           </Link>
         </NavbarItem>
