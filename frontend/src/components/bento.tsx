@@ -2,7 +2,6 @@ import React from "react";
 import { cn } from "../../lib/utils";
 import "../../src/index.css";
 
-
 export const BentoGrid = ({
   className,
   children,
@@ -11,7 +10,9 @@ export const BentoGrid = ({
   children?: React.ReactNode;
 }) => {
   return (
-    <div className={cn("grid md:grid-cols-2 gap-4 mx-auto ", className)}>
+    <div
+      className={cn("grid md:grid-cols-2 gap-4 mx-auto relative", className)}
+    >
       {children}
     </div>
   );
@@ -33,7 +34,7 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "rounded-xl group/bento hover:shadow-xl text-6xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] bg-neutral-400 border border-transparent justify-between flex flex-col space-y-4 w-full h-[60%]",
+        "rounded-xl group/bento hover:shadow-2xl text-6xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] bg-neutral-400 border border-transparent justify-between flex flex-col space-y-4 w-full h-[60%] z-10",
         className
       )}
     >

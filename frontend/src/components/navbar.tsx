@@ -4,9 +4,8 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  Link,
 } from "@nextui-org/react";
-
+import { Link } from "react-router-dom";
 import Logo from "../components/logo";
 
 const Navbarr = () => {
@@ -14,11 +13,13 @@ const Navbarr = () => {
     <Navbar className="bg-black bg-opacity-10 backdrop-blur-lg py-5 fixed top-0 w-full z-30">
       <NavbarBrand className="!flex items-center h-full pt-0">
         <div className="!p-0">
-          <Logo />
+          <Link to="/home">
+            <Logo></Logo>
+          </Link>
         </div>
       </NavbarBrand>
       <NavbarContent
-        className="text-white hidden sm:flex gap-4 ml-auto items-center h-full"
+        className="text-white hidden sm:flex gap-6 ml-auto items-center h-full font-bold pr-4"
         style={{ fontFamily: "Poppins, sans-serif" }}
       >
         <NavbarItem>
@@ -27,14 +28,12 @@ const Navbarr = () => {
           </Link>
         </NavbarItem>
         <NavbarItem isActive>
-          <Link href="#" aria-current="page">
+          <Link href="#"  aria-current="page">
             About
           </Link>
         </NavbarItem>
-      </NavbarContent>
-      <NavbarContent justify="end">
-        <NavbarItem className="hidden lg:flex items-center h-full pr-4">
-          <Link href="#" className="text-white">
+        <NavbarItem isActive>
+          <Link href="#"  aria-current="page">
             Contact
           </Link>
         </NavbarItem>

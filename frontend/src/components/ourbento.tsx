@@ -7,10 +7,10 @@ import { BentoGrid, BentoGridItem } from "../components/bento";
 
 export const CustomBentoGrid = () => {
   return (
-    <BentoGrid className="p-8 h-screen">
+    <BentoGrid className="p-8 h-screen relative">
       <div className="w-full">
         <BentoGridItem
-          className="bg-green-500 text-white w-full"
+          className="bg-custom-gradient text-white w-full"
           title={<div className="text-5xl">240%</div>}
           description={<div>Moisture Levels</div>}
           icon={<div className="icon-placeholder" />}
@@ -18,20 +18,20 @@ export const CustomBentoGrid = () => {
       </div>
       <div className="w-full h-[148.797px] grid grid-cols-2 gap-4">
         <BentoGridItem
-          className="w-full h-[200.797px]"
+          className="bg-white text-black w-full h-[200.797px]"
           title={<div className="text-5xl">99%</div>}
           description={<div>Nutrient 1</div>}
           icon={<div className="icon-placeholder" />}
         />
         <BentoGridItem
-          className="w-full h-[200.797px]"
+          className="bg-white text-black w-full h-[200.797px]"
           title={<div className="text-5xl">32%</div>}
           description={<div>Nutrient 2</div>}
           icon={<div className="icon-placeholder" />}
         />
         <div className="col-span-2 h-[225.797px]">
           <BentoGridItem
-            className="w-full h-[260px]"
+            className="bg-white text-black w-full h-[260px]"
             title={<div className="text-5xl">60%</div>}
             description={<div>Nutrient 3</div>}
             icon={<div className="icon-placeholder" />}
