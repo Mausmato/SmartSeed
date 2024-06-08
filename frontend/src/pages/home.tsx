@@ -8,6 +8,8 @@ import { BackgroundGradientAnimation } from "../components/bg";
 import { Link } from "react-router-dom";
 import Navbar from "../components/navbar";
 import ShimmerButton from "../components/shimmer";
+import { motion } from "framer-motion"; // Import motion from framer-motion
+
 
 const Home: React.FC = () => {
   const [image, setImage] = useState<string | null>(null);
@@ -30,6 +32,7 @@ const Home: React.FC = () => {
   }, []);
 
   return (
+    
     <div className="relative">
       <BackgroundGradientAnimation className="absolute inset-0 z-10">
         <div>
@@ -52,11 +55,13 @@ const Home: React.FC = () => {
 */}
         </div>
         <div className="z-10 flex min-h-[8rem] items-center justify-center">
-          <ShimmerButton className="shadow-2xl">
-            <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
-              Get Started  &#8594;
-            </span>
-          </ShimmerButton>
+          <Link to="/dash">
+            <ShimmerButton className="shadow-2xl">
+              <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
+                Get Started &#8594;
+              </span>
+            </ShimmerButton>
+          </Link>
         </div>{" "}
       </BackgroundGradientAnimation>
     </div>

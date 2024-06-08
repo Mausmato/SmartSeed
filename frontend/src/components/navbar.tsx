@@ -12,11 +12,13 @@ import Logo from "../components/logo";
 const Navbarr = () => {
   return (
     <Navbar
-      className="bg-gradient-to-b from-transparent via-transparent to-transparent py-4 "
+      className="bg-gradient-to-b from-transparent via-transparent to-transparent py-5 "
       style={{ backdropFilter: "blur(10px)" }}
     >
-      <NavbarBrand className="flex items-center h-full pt-3 pl-">
-      <Logo/>
+      <NavbarBrand className="!flex items-center h-full  pt-0 pl-">
+        <div className="!p-0">
+          <Logo />
+        </div>
       </NavbarBrand>
       <NavbarContent
         className="text-white hidden sm:flex gap-4 ml-auto items-center h-full"
