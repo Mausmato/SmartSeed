@@ -1,24 +1,34 @@
-import BackgroundGradientAnimation from "./components/bg"
+import React, { useState } from 'react';
+import Header from './components/Header';
+import DropImage from './components/DropImage';
+import MoistureLevels from './components/MoistureLevels';
+import SoilNutrients from './components/SoilNutrients';
 
-function App() {
+
+const App: React.FC = () => {
+  const [image, setImage] = useState<string | null>(null);
+  const [moisture, setMoisture] = useState<number>(0);
+  const [nutrients, setNutrients] = useState<string[]>([]);
+  const [recommendations, setRecommendations] = useState<string[]>([]);
+
+  const handleImageUpload = (uploadedImage: File) => {
+    setImage(URL.createObjectURL(uploadedImage));
+
+    // Mock data
+    setMoisture(30);
+    setNutrients(['Potassium: 20ppm', 'Nitrate: 15ppm']);
+    setRecommendations(['Buy potassium product', 'Water 2 times per day']);
+  };
+
   return (
-    <>
-      <BackgroundGradientAnimation>
-        <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl">
-          <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20">
-            Gradients X Animations
-          </p>
-        </div>
-      </BackgroundGradientAnimation>
-      <div className="flex-row">
-        <div className="text-red-400">
-          <h1>Hello World</h1>
-          <h1>Hello World</h1>
-          <h1>Hello World</h1>
-        </div>
-      </div>
-    </>
+    <div>
+      <Header />
+      <DropImage onImageUpload={handleImageUpload} />
+      {image && <img src={image} alt="Uploaded" />}
+      <MoistureLevels moisture={moisture} />
+      <SoilNutrients nutrients={nutrients} />
+    </div>
   );
-}
+};
 
-export default App
+export default App;
