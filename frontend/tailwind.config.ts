@@ -15,7 +15,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'custom-gradient': 'linear-gradient(45deg, rgba(145, 255, 102, 1) 0%, rgba(107, 176, 103, 1) 50%, rgba(33, 150, 83, 1) 100%)',      },
+        'custom-gradient': 'linear-gradient(45deg, rgba(33, 150, 83, 1) 0%, rgba(107, 176, 103, 1) 50%, rgba(9, 208, 49, 1) 100%)',      },
       animation: {
         first: "moveVertical 30s ease infinite",
         second: "moveInCircle 20s reverse infinite",

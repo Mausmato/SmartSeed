@@ -2,6 +2,7 @@ import React from "react";
 import "../../src/index.css";
 import Navbar from "../components/navbar";
 import { CustomBentoGrid } from "../components/ourbento";
+import recommendations from "../components/bottomb";
 
 export function GridBackground() {
   return (
@@ -18,6 +19,9 @@ export function GridBackground() {
       <div className="w-[90%]">
         <CustomBentoGrid />
       </div>
+      <h1 className="justify-center items-center pt-24 text-4xl sm:text-6xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-[#A2A620] via-[#81C169] via-[#32B94E] to-[#22C55D] py-8">
+        Recommendations
+      </h1>
     </div>
   );
 }

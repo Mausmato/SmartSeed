@@ -19,21 +19,21 @@ export const CustomBentoGrid = () => {
       <div className="w-full h-[148.797px] grid grid-cols-2 gap-4">
         <BentoGridItem
           className="bg-white text-black w-full h-[200.797px]"
-          title={<div className="text-5xl">99%</div>}
-          description={<div>Nutrient 1</div>}
+          title={<div className="text-5xl  text-neutral-900">99%</div>}
+          description={<div className=" text-neutral-800">Nutrient 1</div>}
           icon={<div className="icon-placeholder" />}
         />
         <BentoGridItem
           className="bg-white text-black w-full h-[200.797px]"
-          title={<div className="text-5xl">32%</div>}
-          description={<div>Nutrient 2</div>}
+          title={<div className="text-5xl text-neutral-900">32%</div>}
+          description={<div className=" text-neutral-800">Nutrient 2</div>}
           icon={<div className="icon-placeholder" />}
         />
         <div className="col-span-2 h-[225.797px]">
           <BentoGridItem
             className="bg-white text-black w-full h-[260px]"
-            title={<div className="text-5xl">60%</div>}
-            description={<div>Nutrient 3</div>}
+            title={<div className="text-5xl text-neutral-900">60%</div>}
+            description={<div className=" text-neutral-800">Nutrient 3</div>}
             icon={<div className="icon-placeholder" />}
           />
         </div>
