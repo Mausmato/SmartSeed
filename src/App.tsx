@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import DropImage from "./components/DropImage";
 import MoistureLevels from "./components/MoistureLevels";
 import SoilNutrients from "./components/SoilNutrients";
-import {BackgroundGradientAnimation} from "./components/bg";
+import { BackgroundGradientAnimation } from "./components/bg";
 
 const App: React.FC = () => {
   const [image, setImage] = useState<string | null>(null);
@@ -22,11 +22,14 @@ const App: React.FC = () => {
 
   return (
     <div>
-      <BackgroundGradientAnimation>
-        <div style={{ position: "relative" }}>
+      <BackgroundGradientAnimation className="absolute inset-0">
+        <div className="relative">
           <Header />
           <DropImage onImageUpload={handleImageUpload} />
-          {image && <img src={image} alt="Uploaded" />}
+          {image && (
+            <img src={image} alt="Uploaded" className="mx-auto mt-4" />
+          )}{" "}
+          {/* Adjust margin top */}
           <MoistureLevels moisture={moisture} />
           <SoilNutrients nutrients={nutrients} />
         </div>
