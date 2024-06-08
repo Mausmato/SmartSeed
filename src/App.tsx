@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import Header from './components/Header';
-import DropImage from './components/DropImage';
-import MoistureLevels from './components/MoistureLevels';
-import SoilNutrients from './components/SoilNutrients';
-
+import React, { useState } from "react";
+import Header from "./components/Header";
+import DropImage from "./components/DropImage";
+import MoistureLevels from "./components/MoistureLevels";
+import SoilNutrients from "./components/SoilNutrients";
+import {BackgroundGradientAnimation} from "./components/bg";
 
 const App: React.FC = () => {
   const [image, setImage] = useState<string | null>(null);
@@ -16,17 +16,21 @@ const App: React.FC = () => {
 
     // Mock data
     setMoisture(30);
-    setNutrients(['Potassium: 20ppm', 'Nitrate: 15ppm']);
-    setRecommendations(['Buy potassium product', 'Water 2 times per day']);
+    setNutrients(["Potassium: 20ppm", "Nitrate: 15ppm"]);
+    setRecommendations(["Buy potassium product", "Water 2 times per day"]);
   };
 
   return (
     <div>
-      <Header />
-      <DropImage onImageUpload={handleImageUpload} />
-      {image && <img src={image} alt="Uploaded" />}
-      <MoistureLevels moisture={moisture} />
-      <SoilNutrients nutrients={nutrients} />
+      <BackgroundGradientAnimation>
+        <div style={{ position: "relative" }}>
+          <Header />
+          <DropImage onImageUpload={handleImageUpload} />
+          {image && <img src={image} alt="Uploaded" />}
+          <MoistureLevels moisture={moisture} />
+          <SoilNutrients nutrients={nutrients} />
+        </div>
+      </BackgroundGradientAnimation>
     </div>
   );
 };
