@@ -22,14 +22,15 @@ const App: React.FC = () => {
 
   return (
     <div>
-      <BackgroundGradientAnimation className="absolute inset-0">
+      <BackgroundGradientAnimation className="absolute inset-0 z-10">
         <div className="relative">
-          <Header />
+          <div className="">
+            <Header />
+          </div>
           <DropImage onImageUpload={handleImageUpload} />
           {image && (
             <img src={image} alt="Uploaded" className="mx-auto mt-4" />
           )}{" "}
-          {/* Adjust margin top */}
           <MoistureLevels moisture={moisture} />
           <SoilNutrients nutrients={nutrients} />
         </div>
