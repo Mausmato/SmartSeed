@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 export const BackgroundGradientAnimation = ({
   gradientBackgroundStart = "rgb(57, 135, 57)",
-  gradientBackgroundEnd = "rgb(125, 85, 54)",
+  gradientBackgroundEnd = "rgb(125, 85, 55)",
   firstColor = "145, 255, 102",
   secondColor = "184, 134, 11",
   thirdColor = "107, 176, 103",
@@ -13,7 +13,7 @@ export const BackgroundGradientAnimation = ({
   pointerColor = "0, 100, 0",
   size = "80%",
   blendingValue = "hard-light",
-  children,
+  children, 
   className,
   interactive = true,
   containerClassName,
