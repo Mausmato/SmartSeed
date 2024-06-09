@@ -31,7 +31,7 @@ export const CustomBentoGrid = () => {
         />
         <div className="col-span-2 h-[225.797px]">
           <BentoGridItem
-            className="bg-white text-black w-full h-[260px]"
+            className="bg-white text-black w-full h-[234px]"
             title={<div className="text-5xl text-neutral-900">60%</div>}
             description={<div className=" text-neutral-800">Nutrient 3</div>}
             icon={<div className="icon-placeholder" />}
